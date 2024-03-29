@@ -8,7 +8,7 @@ function enviarPalabra() {
     let palabraInvertida = []
 
     //aqui hago un for que usa como limite el largo de la palabra en cuestion 
-    for(let i = 0; i <= palabra.length; i++) {
+    for(let i = 0; i < palabra.length; i++) {
 
         //aqui voy usando la letra de la palabra segun la posición y metiendola al inicio del array para que se acomoden al reves
 

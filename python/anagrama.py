@@ -1,25 +1,23 @@
-import time
-first_word=str(input("escribe una palabra: "))
-second_word=str(input("escribe otra palabra: "))
-first_word_separeted=[]
-second_word_separeted=[]
-anagrama=True
+first_word = input("Escribe una palabra: ").lower()
+second_word = input("Escribe otra palabra: ").lower()
 
-first_word=first_word.islower
-second_word=second_word.islower
-for letras in first_word:
-    first_word_separeted.append(letras=letras)
+first_word_separated = []
+second_word_separated = []
+anagrama = True
 
-for letras in second_word:
-    second_word_separeted.append(letras=letras)
+for letra in first_word:
+    first_word_separated.append(letra)
 
-for letras_separadas in second_word_separeted:
-    if letras_separadas not in first_word_separeted:
-        anagrama=False
-    else:
-        pass
+for letra in second_word:
+    second_word_separated.append(letra)
 
-if anagrama==True:
-    print("Las palabras si son anagramas")
+first_word_separated.sort()
+second_word_separated.sort()
+
+if first_word_separated != second_word_separated:
+    anagrama = False
+
+if anagrama:
+    print("Las palabras sí son anagramas.")
 else:
-    print("Las palabras no son anagramas")
+    print("Las palabras no son anagramas.")
