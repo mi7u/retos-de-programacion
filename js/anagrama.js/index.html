@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-   <h1>dame dos palabras y te dire si son anagramas</h1>
-   <input type="text" id="palabraUnoInput">
-   <input type="text" id="palabraDosInput">
-   <button onclick="analizarPalabra()">Enviar</button> 
-   <div id="resultadoAnagrama"></div>
+   <div class="content">
+    <h1 class="titulo">dame dos palabras y te dire si son anagramas</h1>
+        <article class="article">
+            <input type="text" id="palabraUnoInput" placeholder="Dime la primer palabra">
+            <input type="text" id="palabraDosInput" placeholder="Dime la segunda palabra">
+            <button id="boton" onclick="analizarPalabra(); borrarBoton()">Enviar</button> 
+            <div id="resultadoAnagrama"></div>
+        </article>
+   </div>
 </body>
 </html>

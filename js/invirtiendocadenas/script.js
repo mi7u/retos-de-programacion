@@ -24,3 +24,8 @@ function enviarPalabra() {
     alert("La palabra invertida es :" + palabraInvertida.join(""));
 
 }
+
+function ocultarBoton() {
+    var boton = document.getElementById("boton");
+    boton.style.display = "none";
+}

@@ -43,3 +43,8 @@ function analizarPalabra() {
     //regreso el resultado con un ternario dependiendo de si es anagrama o no
     document.getElementById("resultadoAnagrama").textContent = (anagrama) ? "Si es un anagrama" : "No es un anagrama";
 }
+
+function borrarBoton() {
+    var boton = document.getElementById("boton");
+    boton.style.display = "none";
+}
