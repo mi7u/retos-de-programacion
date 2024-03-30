@@ -21,11 +21,19 @@ function enviarPalabra() {
 
     //crea una alerta que aparece cuando le das a enviar donde tambien se muestra la palabra innvertida
 
-    alert("La palabra invertida es :" + palabraInvertida.join(""));
+    /*alert("La palabra invertida es :" + palabraInvertida.join(""));*/
 
 }
 
+/*
 function ocultarBoton() {
     var boton = document.getElementById("boton");
     boton.style.display = "none";
+}
+*/
+
+function mostrarCuadro() {
+    document.getElementById("boton").addEventListener("click", function() {
+        document.getElementById("cuadroDeResultado").style.display = "block";
+    });
 }

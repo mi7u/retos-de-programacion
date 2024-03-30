@@ -26,9 +26,9 @@ body {
     align-items: center;
 }
 
-.titulo {
+#titulo {
     border-radius: 20px;
-    width: 90%;
+    width: 80;
     font-size: 40px;
     color: black;
     background-color: #73a57d;

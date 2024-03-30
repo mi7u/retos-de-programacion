@@ -44,7 +44,8 @@ function analizarPalabra() {
     document.getElementById("resultadoAnagrama").textContent = (anagrama) ? "Si es un anagrama" : "No es un anagrama";
 }
 
-function borrarBoton() {
-    var boton = document.getElementById("boton");
-    boton.style.display = "none";
+function mostrarCuadro() {
+    document.getElementById("boton").addEventListener("click", function() {
+        document.getElementById("cuadroDeResultado").style.display = "block";
+    });
 }

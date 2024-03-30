@@ -14,7 +14,10 @@
         <div class="article">
             <input type="text" id="str1" placeholder="Escribe aqui la primer palabra">
             <input type="text" id="str2" placeholder="Escribe aqui la segunda palabra">
-            <button onclick="filtro()">Enviar</button>
+            <button id="boton" onclick="filtro(); mostrarCuadro()">Enviar</button>
+        </div>
+        <div class="article" id="cuadroDeResultado" style="display: none;">
+            <h1 id="titulo">Resultados</h1>
             <div id="resultadoEliminadorUno"></div>
             <div id="resultadoEliminadorDos"></div>
         </div>

@@ -1,4 +1,11 @@
+function mostrarCuadro() {
+    document.getElementById("boton").addEventListener("click", function() {
+        document.getElementById("cuadroDeResultado").style.display = "block";
+    });
+}
+
 function filtro() {
+
     let str1 = document.getElementById("str1").value.toLowerCase();
     let str2 = document.getElementById("str2").value.toLowerCase();
     let out1 = []
@@ -25,4 +32,6 @@ function filtro() {
     document.getElementById("resultadoEliminadorUno").textContent = "La palabra numero 1 ahora es: " + out1.join(", ");
     document.getElementById("resultadoEliminadorDos").textContent = "La palabra numero 2 ahora es "  + out2.join(", ");
     
+   
+
 }

@@ -12,8 +12,12 @@
         <h1 class="titulo">Ingresa una palabra para invertirla: </h1>
         <div class="article">
             <input type="text" id="palabraInput" placeholder="Escribe aqui la palabra">
-            <button id="boton" onclick="enviarPalabra(); ocultarBoton();">Enviar</button>
-            <div id="resultado"></div>
+            <button id="boton" onclick="enviarPalabra(); mostrarCuadro();">Enviar</button>
+            
+        </div>
+        <div class="article" id="cuadroDeResultado" style="display: none;">
+            <h1 class="titulo">Resultado</h1>
+            <div id="resultado"></div>    
         </div>
     </div>
 </body>
