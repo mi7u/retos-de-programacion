@@ -7,6 +7,21 @@ function analizarPalabra() {
     //declaro desde un inicio que son anagramas
     let anagrama=true
 
+    //se verifica si ambos espacios estan ocupados y si no te salta una alarma
+    
+    if (palabraUno.length === 0 || palabraDos.length === 0) {
+        
+        alert("Por favor, ingrese ambas palabras.")
+        return;
+    }
+
+    //Verifica que las palabras sean del mismo tamanio y si no, te salta una alerta para que repitas de nuevo el proceso
+
+    if (palabraUno.length !== palabraDos.length) {
+        alert("El numero de letras no coincide, intente de nuevo")
+        return;
+    }
+
     //creo un bucle que comparara si la segunda palabra tiene las letras de la primera(aunque sean desordenadas)
     for (let i = 0; i < palabraUno.length; i++) {
         if (!palabraDos.includes(palabraUno[i])) {
