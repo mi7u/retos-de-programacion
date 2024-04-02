@@ -1,0 +1,182 @@
+body {
+    background-color: #fcfcfc;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 20px ;
+}
+
+.article {
+    display: flex;
+    padding: 1rem;
+    border-radius: 25px;
+    width: 45%;
+    height: 45%;
+    padding-bottom: 1%;
+    padding-top: 1px;
+    background-color: #E1EBE3;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    border-radius: 20px;
+    width: 80;
+    font-size: 40px;
+    color: black;
+    background-color: #73a57d;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+}
+
+button {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 4px;
+    background-color:#b79c8f ;
+    border: none;
+    overflow: hidden;
+}
+
+.buttom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#rock1 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#rock1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#paper1 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#paper1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scissors1 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#scissors1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#rock2 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#rock2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#paper2 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#paper2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scissors2 {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border: none;
+}
+
+#scissors2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button:hover {
+    background-color: #b09181;
+    font-variant-position: super;
+    padding-bottom: 0;
+}
+
+input {
+    color: #110505;
+    width: 60%;
+    border: none;
+    background-color: #E1EBE3;
+}
+input:hover {
+    background-color: #d4edd9;
+    font-variant: small-caps;
+}
+
+
+.player1 {
+    display: flex;
+}
+
+.player2 {
+    display: flex;
+}
+
+.articleResults {
+    display: flex;
+    padding: 1rem;
+    border-radius: 25px;
+    width: 45%;
+    height: 45%;
+    padding-bottom: 1%;
+    padding-top: 1px;
+    background-color: #E1EBE3;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+

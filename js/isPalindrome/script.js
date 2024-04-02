@@ -12,7 +12,7 @@ function palindromeAnalyzer() {
         }
     }
 
-    document.getElementById("palindromeResult").textContent = (isPalindrome) ? "The word in fact is palindrome" : "This isnt a palindrome";
+    document.getElementById("palindromeResult").textContent = (isPalindrome) ? "The word indeed is palindrome" : "This isnt a palindrome";
 
 }
 
