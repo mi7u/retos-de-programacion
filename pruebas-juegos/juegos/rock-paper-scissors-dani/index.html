@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h1 id="titulo">Rock-Paper-Scissors</h1>
+        <div class="article">
+            <h1>Firstly you need to chose your move</h1>
+            <div class="buttoms">
+                <button class="buttom-image" onclick="rockPaperScissorsGenerator(ROCK)">
+                    rock
+                    <img src="img/rock.jpg" alt="rock">
+                </button>
+                <button class="buttom-image" onclick="rockPaperScissorsGenerator(SCISSORS);">
+                    Scissors
+                    <img src="img/scissors.jpg" alt="scissors">
+                </button>
+                <button class="buttom-image" onclick="rockPaperScissorsGenerator(PAPER);">
+                    Paper
+                    <img src="img/paper.jpg">
+                </button>
+            </div>
+        </div>
+        <div class="articleResults">
+            <div class="player1">
+                <div id="rock1" style="display: none;">
+                    <img src="img/rock.jpg" alt="rock">
+                </div>
+                <div id="paper1" style="display: none;">
+                    <img src="img/paper.jpg" alt="paper">
+                </div>
+                <div id="scissors1" style="display: none;">
+                    <img src="img/scissors.jpg" alt="scissors">
+                </div>
+            </div>
+            <h1 id="result"></h1>
+            <div class="player2">
+                <div  id="rock2" style="display: none;">
+                    <img src="img/rock.jpg" alt="rock";>
+                </div>   
+                <div id="paper2" style="display: none;">
+                    <img src="img/paper.jpg" alt="paper";>
+                </div>
+                <div id="scissors2" style="display: none;">
+                    <img src="img/scissors.jpg" alt="scissors";>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
