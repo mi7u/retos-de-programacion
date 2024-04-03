@@ -1,18 +1,12 @@
 // lista de elecciones
 const elections = {
   rock: {
-    id: 1,
-    name: "ROCK",
     img: "img/rock.jpg",
   },
   paper: {
-    id: 2,
-    name: "PAPER",
     img: "img/paper.jpg",
   },
   scissors: {
-    id: 3,
-    name: "SCISSORS",
     img: "img/scissors.jpg",
   },
 };
