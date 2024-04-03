@@ -1,75 +1,39 @@
+const ROCK = "ROCK";
+const PAPER = "PAPER";
+const SCISSORS = "SCISSORS";
+const winners = [[ROCK, SCISSORS], [PAPER, ROCK], [SCISSORS, PAPER]];
+const losers = [[ROCK, PAPER],[PAPER, SCISSORS],[SCISSORS, ROCK]];
 
-const ROCK = 1;
-const PAPER = 2;
-const SCISSORS = 3;
-
-function rockPaperScissorsGenerator() {
-    randomDecision = Math.floor(Math.random() * 3) + 1; 
+function rockPaperScissorsGenerator(election) {
+    let randomDecision = Math.floor(Math.random() * 3) + 1; 
+    let imagenOne;
+    if (election == "ROCK") {
+        imagenOne = document.getElementById("rock1");
+    } else if (election == "PAPER") {
+        imagenOne = document.getElementById("paper1");
+    } else if (election == "SCISSORS") {
+        imagenOne = document.getElementById("scissors1")
+    }
     let imagenTwo;
-
-    if (randomDecision == ROCK){
-        imagenTwo = "rock2";
-    } else if(randomDecision == PAPER) {
-        imagenTwo = "paper2";
-    } else if( randomDecision == SCISSORS) {
-        imagenTwo = "scissors2";
+    if (randomDecision === 1) {
+        randomDecision = ROCK;
+        imagenTwo = document.getElementById("rock2");
+    } else if(randomDecision === 2) {
+        randomDecision = PAPER;
+        imagenTwo = document.getElementById("paper2");
+    } else if(randomDecision === 3) {
+        randomDecision = SCISSORS;
+        imagenTwo = document.getElementById("scissors2");
     }
-    return { randomDecision: randomDecision, imagenTwo: imagenTwo};
-}
-
-function rock() { 
-
-    let decision = rockPaperScissorsGenerator();
-    let imagenOne = document.getElementById("rock1");
-    let imagenTwo = document.getElementById(decision.imagenTwo)
-
-    if (decision.randomDecision == SCISSORS) {
-        document.getElementById("result").textContent = "You won"
-    } else if (decision.randomDecision == PAPER) {
-        document.getElementById("result").textContent = "Game over"
-    } else {
-        document.getElementById("result").textContent = "Tie"
-    }
-    imagenTwo.style.display = "block";
-    imagenOne.style.display = "block";
-}
-
-function scissors() {
-
-    let decision = rockPaperScissorsGenerator();
-    let imagenOne = document.getElementById("scissors1");
-    let imagenTwo = document.getElementById(decision.imagenTwo)
-
-    if (decision.randomDecision == PAPER) {
-        document.getElementById("result").textContent = "You won"
-    } else if (decision.randomDecision == ROCK) {
-        document.getElementById("result").textContent = "Game over"
-    } else {
-        document.getElementById("result").textContent = "Tie"
+    let game = [election, randomDecision];
+    if (winners.some(winner => winner[0] === election && winner[1] === randomDecision)) {
+        document.getElementById("result").textContent = "You won";
+    } else if(losers.some(loser => loser[0] === election && loser[1] === randomDecision)) {
+        document.getElementById("result").textContent = "Game over";
+    } else if(election === randomDecision) {
+        document.getElementById("result").textContent = "Tie";
     }
     imagenOne.style.display = "block";
     imagenTwo.style.display = "block";
-}
-
-function paper() {
-
-    let decision = rockPaperScissorsGenerator();
-    let imagenOne = document.getElementById("paper1");
-    let imagenTwo = document.getElementById(decision.imagenTwo)
-
-    if (decision.randomDecision == ROCK) {
-        document.getElementById("result").textContent = "You won"
-    } else if (decision.randomDecision == SCISSORS) {
-        document.getElementById("result").textContent = "Game over"
-    } else {
-        document.getElementById("result").textContent = "Tie"
-    }
-    
-    imagenOne.style.display = "block";
-    imagenTwo.style.display = "block";
-}
-
-function reiniciarPagina() {
-    location.reload();
 }
 
