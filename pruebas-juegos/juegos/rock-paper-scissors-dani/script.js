@@ -1,63 +1,57 @@
-const ROCK = "ROCK";
-const PAPER = "PAPER";
-const SCISSORS = "SCISSORS";
+// lista de elecciones
+const elections = {
+  rock: {
+    id: 1,
+    name: "ROCK",
+    img: "img/rock.jpg",
+  },
+  paper: {
+    id: 2,
+    name: "PAPER",
+    img: "img/paper.jpg",
+  },
+  scissors: {
+    id: 3,
+    name: "SCISSORS",
+    img: "img/scissors.jpg",
+  },
+};
+
+// condiciones victoriosas
 const winners = [
-  [ROCK, SCISSORS],
-  [PAPER, ROCK],
-  [SCISSORS, PAPER],
-];
-const losers = [
-  [ROCK, PAPER],
-  [PAPER, SCISSORS],
-  [SCISSORS, ROCK],
+  [elections.rock, elections.scissors],
+  [elections.paper, elections.rock],
+  [elections.scissors, elections.paper],
 ];
 
-function resetDecitions() {
-  document.getElementById("rock1").style.display = "none";
-  document.getElementById("paper1").style.display = "none";
-  document.getElementById("scissors1").style.display = "none";
-  document.getElementById("rock2").style.display = "none";
-  document.getElementById("paper2").style.display = "none";
-  document.getElementById("scissors2").style.display = "none";
+// comparar las manos, para obtener el resultado
+function compareHands(handA, handB) {
+  if (handA === handB) return "draw ☝️🤓";
+
+  if (winners.some((element) => element[0] === handA && element[1] === handB)) {
+    return "win 😃";
+  }
+
+  return "lose 🥺";
 }
 
 function rockPaperScissorsGenerator(election) {
-  resetDecitions();
+  // inicializar elementos
+  const player1Img = document.getElementById("player1");
+  const player2Img = document.getElementById("player2");
+  const result = document.getElementById("result");
 
-  let randomDecision = Math.floor(Math.random() * 3) + 1;
-  let imagenOne;
-  if (election == "ROCK") {
-    imagenOne = document.getElementById("rock1");
-  } else if (election == "PAPER") {
-    imagenOne = document.getElementById("paper1");
-  } else if (election == "SCISSORS") {
-    imagenOne = document.getElementById("scissors1");
-  }
-  let imagenTwo;
-  if (randomDecision === 1) {
-    randomDecision = ROCK;
-    imagenTwo = document.getElementById("rock2");
-  } else if (randomDecision === 2) {
-    randomDecision = PAPER;
-    imagenTwo = document.getElementById("paper2");
-  } else if (randomDecision === 3) {
-    randomDecision = SCISSORS;
-    imagenTwo = document.getElementById("scissors2");
-  }
-  let game = [election, randomDecision];
-  if (
-    winners.some(
-      (winner) => winner[0] === election && winner[1] === randomDecision
-    )
-  ) {
-    document.getElementById("result").textContent = "You won";
-  } else if (
-    losers.some((loser) => loser[0] === election && loser[1] === randomDecision)
-  ) {
-    document.getElementById("result").textContent = "Game over";
-  } else if (election === randomDecision) {
-    document.getElementById("result").textContent = "Tie";
-  }
-  imagenOne.style.display = "block";
-  imagenTwo.style.display = "block";
+  result.textContent = " "; // resetea el texto de result
+
+  // Obtener el objeto elejido por ambos jugadores
+  player1Election = elections[election];
+  let randomDecision = Math.floor(Math.random() * 3);
+  player2Election = Object.values(elections)[randomDecision];
+
+  // mostrar la imagen elegida
+  player1Img.src = player1Election.img;
+  player2Img.src = player2Election.img;
+
+  // calcular y mostrar el resultado
+  result.textContent = compareHands(player1Election, player2Election);
 }
