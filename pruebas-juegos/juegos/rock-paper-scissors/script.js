@@ -4,7 +4,17 @@ const SCISSORS = "SCISSORS";
 const winners = [[ROCK, SCISSORS], [PAPER, ROCK], [SCISSORS, PAPER]];
 const losers = [[ROCK, PAPER],[PAPER, SCISSORS],[SCISSORS, ROCK]];
 
+function resetDecitions() {
+    document.getElementById("rock1").style.display = "none";
+    document.getElementById("paper1").style.display = "none";
+    document.getElementById("scissors1").style.display = "none";
+    document.getElementById("rock2").style.display = "none";
+    document.getElementById("paper2").style.display = "none";
+    document.getElementById("scissors2").style.display = "none";
+  }
+
 function rockPaperScissorsGenerator(election) {
+    resetDecitions();
     let randomDecision = Math.floor(Math.random() * 3) + 1; 
     let imagenOne;
     if (election == "ROCK") {
