@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissors v2</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <h1 class="titulo">Rock-Paper-Scissors</h1>
+        <div class="game_container">
+          <h1>Firstly you need to chose your move</h1>
+          <div class="elections">
+            <span class="election" onclick="rockPaperScissorsGenerator(0)">
+              🪨
+            </span>
+            <span class="election" onclick="rockPaperScissorsGenerator(1)">
+              📃
+            </span>
+            <span class="election" onclick="rockPaperScissorsGenerator(2)">
+              ✂️
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="result_container">
+        <span id="player1_result" class="player_result"></span>
+        <span id="result_text"></span>
+        <span id="player2_result" class="player_result"></span>
+      </div>
+    </div>
+  </body>
+</html>

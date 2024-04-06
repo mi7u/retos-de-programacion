@@ -41,7 +41,6 @@ function rockPaperScissorsGenerator(election) {
   player1Election = elections[election];
   let randomDecision = Math.floor(Math.random() * 3);
   player2Election = Object.values(elections)[randomDecision];
-
   // mostrar la imagen elegida
   player1Img.src = player1Election.img;
   player2Img.src = player2Election.img;
