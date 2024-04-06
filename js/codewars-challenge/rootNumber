@@ -1,12 +1,22 @@
-function digitalRoot() {
+function digitalRoot(n) {
   
-  while (n.length > 1) {
+  while (n.toString().length > 1) {
+    arrayNum = numToArray(n);
     let sum = 0;
-    for (let i = 0; i < n.length;i++) {
-      sum += parseInt(n[i]);
+    for (let i = 0; i < arrayNum.length; i++) {
+        sum += parseInt(arrayNum[i]);
     }
-    n = sum.toString()
+    n = sum;
   } 
-  
-  return parseInt(n);
+  return n;
+}
+
+function numToArray(n) {
+  let nString = n.toString();
+  let arrayNum = [];
+  for (let i = 0; i < nString.length; i++) {
+    arrayNum.push(nString[i])
+  }
+  return arrayNum
+
 }
