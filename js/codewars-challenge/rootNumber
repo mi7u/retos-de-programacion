@@ -1,5 +1,4 @@
 function digitalRoot(n) {
-  
   while (n.toString().length > 1) {
     arrayNum = numToArray(n);
     let sum = 0;
@@ -17,6 +16,5 @@ function numToArray(n) {
   for (let i = 0; i < nString.length; i++) {
     arrayNum.push(nString[i])
   }
-  return arrayNum
-
+  return arrayNum;
 }
